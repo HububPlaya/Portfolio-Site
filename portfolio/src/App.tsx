@@ -1,23 +1,23 @@
-import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Projects from './components/pages/Projects';
-import Home from './components/pages/Home';
-import About from './components/pages/About';
-import Footer from './components/pages/Footer';
-import Header from './components/pages/Header';
+import { FC } from "react";
+import About from "./components/pages/About";
+import Contact from "./components/pages/Contact";
+import Hero from "./components/pages/Hero";
+import Projects from "./components/pages/Projects";
+import Skills from "./components/pages/Skills";
+import Navbar from "./components/pages/navbar";
 
 
-
-const App: React.FC = () => (
-  <Router>
-    <Header />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/projects" element={<Projects />} />
-      <Route path="/about" element={<About />} />
-    </Routes>
-    <Footer />
-  </Router>
+const App: FC = () => (
+  <div>
+    <div id="home">
+      <Hero />
+    </div>
+    <Navbar />
+    <About />
+    <Skills />
+    <Projects />
+    <Contact />
+  </div>
 );
 
-export default App
+export default App;
